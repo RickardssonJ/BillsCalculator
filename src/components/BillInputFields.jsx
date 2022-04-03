@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import { Bills } from "./Bills"
-import { StyledBillsInputDiv } from "../Styles/Styling"
+import { StyledBillsInputDiv, StyledInputField } from "../Styles/Styling"
 
 let id = 0
 export const BillInputFields = () => {
@@ -30,13 +30,13 @@ export const BillInputFields = () => {
           <div>
             <label>
               <span>Företag: </span>
-              <input type="text" name="company" />
+              <StyledInputField type="text" name="company" />
             </label>
           </div>
           <div>
             <label>
               <span>Pris: </span>
-              <input type="number" name="price" />
+              <StyledInputField type="number" name="price" />
             </label>
             <input type="submit" value="Lägg till" />
           </div>

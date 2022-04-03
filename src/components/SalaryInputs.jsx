@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import { StyledSalaryInputDiv, StyledSalaryWrapper } from "../Styles/Styling"
+import { StyledSalaryInputDiv, StyledInputField } from "../Styles/Styling"
 import { Salarys } from "./Salarys"
 
 export const SalaryInputs = () => {
@@ -11,6 +11,9 @@ export const SalaryInputs = () => {
 
     setSalaryOne(Number(e.target.salaryOne.value))
     setSalaryTwo(Number(e.target.salaryTwo.value))
+
+    e.target.salaryOne.value = ""
+    e.target.salaryTwo.value = ""
   }
 
   return (
@@ -20,13 +23,13 @@ export const SalaryInputs = () => {
           <div>
             <label>
               <span>Lön ett: </span>
-              <input type="number" name="salaryOne" />
+              <StyledInputField type="number" name="salaryOne" />
             </label>
           </div>
           <div>
             <label>
               <span>Lön två: </span>
-              <input type="number" name="salaryTwo" />
+              <StyledInputField type="number" name="salaryTwo" />
             </label>
             <input type="submit" value="Lägg till löner" />
           </div>

@@ -9,8 +9,6 @@ export const StyledBillsWrapper = styled.div`
 
 export const StyledBillsDiv = styled.div`
   margin: 0 12rem 0 1rem;
-  /* margin: 0 auto; */
-  /* margin-left: 5rem; */
 `
 
 export const StyledBillsInputDiv = styled.div`
@@ -41,8 +39,14 @@ export const StyledPriceWrapper = styled.div`
 
 export const StyledButton = styled.button`
   border: none;
+  border-radius: 5px;
   cursor: pointer;
   margin: 0 0 0.2rem 1rem;
+  background-color: #f49999;
+
+  :hover {
+    background-color: #f83535;
+  }
 `
 
 export const StyledH3 = styled.h3`
@@ -68,4 +72,10 @@ export const StyledCountButton = styled.button`
 `
 export const StyledSalaryDiv = styled.div`
   padding: 1rem;
+`
+export const StyledInputField = styled.input`
+  border-radius: 5px;
+  border: none;
+  padding: 0.1rem;
+  margin-right: 1rem;
 `

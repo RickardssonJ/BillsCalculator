@@ -40,7 +40,7 @@ export const Bills = ({ billsArray, setBillsArray }) => {
             </StyledPriceWrapper>
           )
         })}
-        <StyledH3>Totalt kosnad</StyledH3>
+        <StyledH3>Total kostnad</StyledH3>
         {billsArray.reduce((sum, obj) => {
           const totalSum = Number(sum) + Number(obj.price)
           setTotalBillSum(totalSum)
