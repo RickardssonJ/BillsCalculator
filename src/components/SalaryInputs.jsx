@@ -1,29 +1,38 @@
-import React from "react"
-import { StyledSalaryInputDiv } from "../Styles/Styling"
+import React, { useState } from "react"
+import { StyledSalaryInputDiv, StyledSalaryWrapper } from "../Styles/Styling"
 import { Salarys } from "./Salarys"
 
 export const SalaryInputs = () => {
+  const [salaryOne, setSalaryOne] = useState()
+  const [salaryTwo, setSalaryTwo] = useState()
+
   const handelOnSubmit = (e) => {
     e.preventDefault()
 
-    console.log("Salary")
+    setSalaryOne(Number(e.target.salaryOne.value))
+    setSalaryTwo(Number(e.target.salaryTwo.value))
   }
+
   return (
     <>
       <StyledSalaryInputDiv>
         <form onSubmit={handelOnSubmit}>
-          <label>
-            Lön ett:
-            <input type="text" name="company" />
-          </label>
-          <label>
-            Lön 2:
-            <input type="number" name="price" />
-          </label>
-          <input type="submit" value="Lägg till" />
+          <div>
+            <label>
+              <span>Lön ett: </span>
+              <input type="number" name="salaryOne" />
+            </label>
+          </div>
+          <div>
+            <label>
+              <span>Lön två: </span>
+              <input type="number" name="salaryTwo" />
+            </label>
+            <input type="submit" value="Lägg till löner" />
+          </div>
         </form>
       </StyledSalaryInputDiv>
-      <Salarys />
+      <Salarys salaryOne={salaryOne} salaryTwo={salaryTwo} />
     </>
   )
 }

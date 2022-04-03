@@ -1,6 +1,7 @@
-import React from "react"
+import React, { useContext } from "react"
+import { TotalSumContext } from "../context/TotalSumContext"
 import {
-  StyledWrapper,
+  StyledBillsWrapper,
   StyledBillsDiv,
   StyledP,
   StyledPriceWrapper,
@@ -9,13 +10,14 @@ import {
 } from "../Styles/Styling"
 
 export const Bills = ({ billsArray, setBillsArray }) => {
+  const { setTotalBillSum } = useContext(TotalSumContext)
+
   const handleOnClick = (id) => {
     setBillsArray(billsArray.filter((obj) => obj.id !== id))
-    console.log(id)
   }
-  console.log(billsArray)
+
   return (
-    <StyledWrapper>
+    <StyledBillsWrapper>
       <StyledBillsDiv>
         <h3>Företag</h3>
         {billsArray.map((obj) => {
@@ -41,9 +43,10 @@ export const Bills = ({ billsArray, setBillsArray }) => {
         <StyledH3>Totalt kosnad</StyledH3>
         {billsArray.reduce((sum, obj) => {
           const totalSum = Number(sum) + Number(obj.price)
+          setTotalBillSum(totalSum)
           return totalSum
         }, 0)}
       </StyledBillsDiv>
-    </StyledWrapper>
+    </StyledBillsWrapper>
   )
 }

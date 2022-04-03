@@ -27,15 +27,19 @@ export const BillInputFields = () => {
     <>
       <StyledBillsInputDiv>
         <form onSubmit={handelOnSubmit}>
-          <label>
-            Företag:
-            <input type="text" name="company" />
-          </label>
-          <label>
-            Pris:
-            <input type="number" name="price" />
-          </label>
-          <input type="submit" value="Lägg till" />
+          <div>
+            <label>
+              <span>Företag: </span>
+              <input type="text" name="company" />
+            </label>
+          </div>
+          <div>
+            <label>
+              <span>Pris: </span>
+              <input type="number" name="price" />
+            </label>
+            <input type="submit" value="Lägg till" />
+          </div>
         </form>
       </StyledBillsInputDiv>
       <Bills billsArray={billsArray} setBillsArray={setBillsArray} />
