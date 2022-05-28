@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/BillsCalculator/static/css/main.073c9b0a.css",
+    "main.js": "/BillsCalculator/static/js/main.cf75da1c.js",
+    "static/js/787.2485f5bf.chunk.js": "/BillsCalculator/static/js/787.2485f5bf.chunk.js",
+    "index.html": "/BillsCalculator/index.html",
+    "main.073c9b0a.css.map": "/BillsCalculator/static/css/main.073c9b0a.css.map",
+    "main.cf75da1c.js.map": "/BillsCalculator/static/js/main.cf75da1c.js.map",
+    "787.2485f5bf.chunk.js.map": "/BillsCalculator/static/js/787.2485f5bf.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.073c9b0a.css",
+    "static/js/main.cf75da1c.js"
+  ]
+}
