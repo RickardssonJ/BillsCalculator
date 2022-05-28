@@ -1,6 +1,6 @@
 {
-  "homepage": "https://rickardssonj.github.io/BillsCalculator/public",
-  "name": "BillsCalculator",
+  "homepage": "https://rickardssonj.github.io/BillsCalculator/",
+  "name": "bills",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
